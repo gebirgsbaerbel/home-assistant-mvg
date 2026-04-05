@@ -38,13 +38,11 @@ sensor:
 
 ## Setup
 
-Add `mvg_card:` to your `configuration.yaml`:
+1. Go to **Settings → Devices & Services → Add Integration**
+2. Search for **MVG Departures Card**
+3. Click submit — no further configuration needed
 
-```yaml
-mvg_card:
-```
-
-Restart Home Assistant. The Lovelace resource is registered automatically.
+The Lovelace resource is registered automatically.
 
 ## Lovelace card
 

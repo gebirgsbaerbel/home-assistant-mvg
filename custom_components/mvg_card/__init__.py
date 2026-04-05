@@ -4,6 +4,7 @@ from __future__ import annotations
 import logging
 
 from homeassistant.components.http import StaticPathConfig
+from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import EVENT_HOMEASSISTANT_STARTED
 from homeassistant.core import HomeAssistant
 
@@ -13,7 +14,7 @@ _CARD_URL  = "/mvg_card/mvg-departures-card.js?v=1"
 _LOGGER = logging.getLogger(__name__)
 
 
-async def async_setup(hass: HomeAssistant, config: dict) -> bool:
+async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Register the card JS as a no-cache static path and auto-add it as a Lovelace resource."""
     await hass.http.async_register_static_paths([
         StaticPathConfig(
@@ -30,6 +31,10 @@ async def async_setup(hass: HomeAssistant, config: dict) -> bool:
             await _async_ensure_lovelace_resource(hass)
         hass.bus.async_listen_once(EVENT_HOMEASSISTANT_STARTED, _on_started)
 
+    return True
+
+
+async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     return True
 
 

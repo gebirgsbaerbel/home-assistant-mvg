@@ -2,6 +2,7 @@
   "domain": "mvg_card",
   "name": "MVG Departures Card",
   "codeowners": [],
+  "config_flow": true,
   "documentation": "",
   "iot_class": "calculated",
   "version": "1.0.0"

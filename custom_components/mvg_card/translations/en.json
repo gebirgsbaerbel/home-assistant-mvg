@@ -1,0 +1,12 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "Click submit to activate the MVG Departures Card. No further configuration is needed here — the card is configured per dashboard tile."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "MVG Departures Card is already set up."
+    }
+  }
+}
