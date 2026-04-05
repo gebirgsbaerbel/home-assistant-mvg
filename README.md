@@ -2,6 +2,8 @@
 
 A Home Assistant custom integration that provides a Lovelace card for displaying live MVG (Münchner Verkehrsgesellschaft) departures.
 
+<img src="light-mode.png" width="48%"> <img src="dark-mode.png" width="48%">
+
 ## Features
 
 - Shows upcoming departures with colored line circles (U-Bahn, S-Bahn)
